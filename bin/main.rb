@@ -44,7 +44,6 @@ loop do
     else
       board[0][player_choose - 1] = first_player
     end
-    board[0].all?(first_player) ? puts "#{player_one} is the winner!";
   elsif player_choose <= 6 && player_choose > 3
     if board[1][player_choose - 4].is_a?(String)
       puts "You've already played on this position"
@@ -57,6 +56,9 @@ loop do
       else
       board[2][player_choose - 7] = first_player
       end
+    end
+    if board[0].all?(first_player) 
+      puts "#{player_one} is the winner!"
     end
   break if (board[0].all?(String) && board[1].all?(String) && board[2].all?(String)) || player_choose.zero?
 
