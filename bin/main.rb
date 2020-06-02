@@ -48,18 +48,20 @@ loop do
     if board[1][player_choose - 4].is_a?(String)
       puts "You've already played on this position"
     else
-    board[1][player_choose - 4] = first_player
+      board[1][player_choose - 4] = first_player
     end
-    elsif player_choose <= 9 && player_choose > 6
+      elsif player_choose <= 9 && player_choose > 6
       if board[2][player_choose - 7].is_a?(String)
         puts "You've already played on this position"
       else
-      board[2][player_choose - 7] = first_player
+        board[2][player_choose - 7] = first_player
       end
-    end
-    if board[0].all?(first_player) 
-      puts "#{player_one} is the winner!"
-    end
+  end
+  if board[0].all?(first_player) 
+    puts "#{player_one} is the winner!"
+  elsif board[1].all?(first_player)
+    puts "#{player_one} is the winner!"
+  end
   break if (board[0].all?(String) && board[1].all?(String) && board[2].all?(String)) || player_choose.zero?
 
   puts "  #{board[0][0]}  |  #{board[0][1]}  |  #{board[0][2]}"
@@ -81,7 +83,7 @@ loop do
   break if (board[0].all?(String) && board[1].all?(String) && board[2].all?(String)) || player_choose.zero?
 end
 if player_choose.zero?
-  puts "Thank you for playing this game"
+  puts 'Thank you for playing this game'
 else
   puts 'It\'s a draw!'
 end
