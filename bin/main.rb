@@ -4,9 +4,9 @@
 
 puts 'Welcome to TIC-TAC-TOE GAME'
 puts
-puts "Player one, enter your name:"
+puts 'Player one, enter your name:'
 player_one = gets.chomp
-puts "Player two, enter your name:"
+puts 'Player two, enter your name:'
 player_two = gets.chomp
 first_player = ''
 second_player = ''
@@ -25,7 +25,7 @@ loop do
   break if first_player == 'O' || second_player == 'O'
 end
 board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-player_choose = ""
+player_choose = ''
 loop do
   puts "  #{board[0][0]}  |  #{board[0][1]}  |  #{board[0][2]}"
   puts '================='
@@ -37,29 +37,27 @@ loop do
   puts 'Enter 0 to quit'
   player_choose = gets.chomp
   player_choose = player_choose.to_i
-  puts "Checking if the selected position is available"  
+  puts 'Checking if the selected position is available'
   if player_choose <= 3 && player_choose >= 1
-    if board[0][player_choose -1].is_a?(String)
+    if board[0][player_choose - 1].is_a?(String)
       puts "You've already played on this position"
     else
-    board[0][player_choose - 1] = first_player
+      board[0][player_choose - 1] = first_player
     end
-    if board[0].all?(first_player)
-      puts "#{player_one} is the winner!"
-    end
+    board[0].all?(first_player) ? puts "#{player_one} is the winner!";
   elsif player_choose <= 6 && player_choose > 3
     if board[1][player_choose - 4].is_a?(String)
       puts "You've already played on this position"
     else
     board[1][player_choose - 4] = first_player
     end
-  elsif player_choose <= 9 && player_choose > 6
-    if board[2][player_choose - 7].is_a?(String)
-      puts "You've already played on this position"
-    else
-    board[2][player_choose - 7] = first_player
+    elsif player_choose <= 9 && player_choose > 6
+      if board[2][player_choose - 7].is_a?(String)
+        puts "You've already played on this position"
+      else
+      board[2][player_choose - 7] = first_player
+      end
     end
-  end
   break if (board[0].all?(String) && board[1].all?(String) && board[2].all?(String)) || player_choose.zero?
 
   puts "  #{board[0][0]}  |  #{board[0][1]}  |  #{board[0][2]}"
@@ -83,5 +81,5 @@ end
 if player_choose.zero?
   puts "Thank you for playing this game"
 else
-  puts "It's a draw!"
+  puts 'It\'s a draw!'
 end
