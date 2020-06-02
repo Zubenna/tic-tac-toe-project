@@ -4,18 +4,18 @@
 
 puts 'Welcome to TIC-TAC-TOE GAME'
 puts
-puts "Player one name:"
+puts "Player one, enter your name:"
 player_one = gets.chomp
-puts "Player two name:"
+puts "Player two, enter your name:"
 player_two = gets.chomp
 first_player = ''
 second_player = ''
 loop do
-  puts "#{player_one} select 'X' or 'O'"
+  puts "Current player - #{player_one}, select 'X' or 'O'"
   first_player = gets.chomp
   if first_player == 'X'
     second_player = 'O'
-    puts "#{player_one} please selected #{first_player} and #{player_two} selected #{second_player}"
+    puts "#{player_one} selected #{first_player} and #{player_two} selected #{second_player}"
   elsif first_player == 'O'
     second_player = 'X'
     puts "#{player_one} please selected #{first_player} and #{player_two} selected #{second_player}"
@@ -33,10 +33,10 @@ loop do
   puts "  #{board[2][0]}  |  #{board[2][1]}  |  #{board[2][2]}"
 
   puts "#{player_one}: please select the number where you want to play from the board"
-  puts "Check if the selected position is available"
   puts 'Enter 0 to quit'
   player_choose = gets.chomp
-  player_choose = player_choose.to_i  
+  player_choose = player_choose.to_i
+  puts "Checking if the selected position is available"  
   if player_choose <= 3 && player_choose >= 1
     if board[0][player_choose -1].is_a?(String)
       puts "You've already played on this position"
@@ -58,6 +58,7 @@ loop do
     else
     board[2][player_choose - 7] = first_player
     end
+    ring)
   end
 
   puts "  #{board[0][0]}  |  #{board[0][1]}  |  #{board[0][2]}"
@@ -76,7 +77,6 @@ loop do
   elsif playert_choose <= 9 && playert_choose > 6
     board[2][playert_choose - 7] = second_player
   end
-
   break if board.all?(String) || player_choose.zero?
 end
 puts "It's a draw!"
