@@ -25,6 +25,7 @@ loop do
   break if first_player == 'O' || second_player == 'O'
 end
 board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+player_choose = ""
 loop do
   puts "  #{board[0][0]}  |  #{board[0][1]}  |  #{board[0][2]}"
   puts '================='
@@ -58,8 +59,8 @@ loop do
     else
     board[2][player_choose - 7] = first_player
     end
-    ring)
   end
+  break if (board[0].all?(String) && board[1].all?(String) && board[2].all?(String)) || player_choose.zero?
 
   puts "  #{board[0][0]}  |  #{board[0][1]}  |  #{board[0][2]}"
   puts '================='
@@ -77,6 +78,10 @@ loop do
   elsif playert_choose <= 9 && playert_choose > 6
     board[2][playert_choose - 7] = second_player
   end
-  break if board.all?(String) || player_choose.zero?
+  break if (board[0].all?(String) && board[1].all?(String) && board[2].all?(String)) || player_choose.zero?
 end
-puts "It's a draw!"
+if player_choose.zero?
+  puts "Thank you for playing this game"
+else
+  puts "It's a draw!"
+end
