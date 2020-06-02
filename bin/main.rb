@@ -18,32 +18,31 @@ loop do
   else
     puts 'Please select X or O'
   end
-  break if first_player == 'O' || first_player == 'X'
+  break if first_player == 'O' || second_player == 'O'
 end
 loop do
-  board = [[1,2,3],[4,5,6],[7,8,9]]
+  board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+  puts "  #{board[0][0]}  |  #{board[0][1]}  |  #{board[0][2]}"
+  puts '================='
+  puts "  #{board[1][0]}  |  #{board[1][1]}  |  #{board[1][2]}"
+  puts '================='
+  puts "  #{board[2][0]}  |  #{board[2][1]}  |  #{board[2][2]}"
 
-puts "  #{board[0][0]}  |  #{board[0][1]}  |  #{board[0][2]}"
-puts '================='
-puts "  #{board[1][0]}  |  #{board[1][1]}  |  #{board[1][2]}"
-puts '================='
-puts "  #{board[2][0]}  |  #{board[2][1]}  |  #{board[2][2]}"
+  puts 'Player one: please select the number where you want to play from the board'
+  puts 'Enter 0 to quit'
+  player_choose = gets.chomp
+  player_choose = player_choose.to_i
 
-puts 'Player one: please select the number where you want to play from the board'
-puts 'Enter 0 to quit'
-player_choose = gets.chomp
-player_choose = player_choose.to_i
+  if player_choose <= 3 && player_choose >= 1
+    board[0][player_choose - 1] = first_player
+    board = board
+  elsif player_choose <= 6 && player_choose > 3
+    board[1][player_choose - 1] = first_player
+    board = board
+  elsif player_choose <= 9 && player_choose > 6
+    board[2][player_choose - 1] = first_player
+    board = board
+  end
 
-if player_choose <= 3 && player_choose >= 1
-  board[0][player_choose - 1] = first_player
-  board = board
-elsif player_choose <= 6 && player_choose > 3
-  board[1][player_choose - 1] = first_player
-  board = board
-elsif player_choose <= 9 && player_choose > 6
-  board[2][player_choose - 1] = first_player
-  board = board
-end
-
-break if board.all?(String) || player_choose.zero?
+  break if board.all?(String) || player_choose.zero?
 end
