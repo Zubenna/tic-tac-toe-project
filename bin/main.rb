@@ -20,15 +20,14 @@ loop do
   end
   break if first_player == 'O' || first_player == 'X'
 end
-loop do 
-board = [ [1, 2, 3], [4, 5, 6], [7, 8, 9]]
+loop do
+  board = [[1,2,3],[4,5,6],[7,8,9]]
 
 puts "  #{board[0][0]}  |  #{board[0][1]}  |  #{board[0][2]}"
 puts '================='
 puts "  #{board[1][0]}  |  #{board[1][1]}  |  #{board[1][2]}"
 puts '================='
 puts "  #{board[2][0]}  |  #{board[2][1]}  |  #{board[2][2]}"
-
 
 puts 'Player one: please select the number where you want to play from the board'
 puts 'Enter 0 to quit'
@@ -43,8 +42,8 @@ elsif player_choose <= 6 && player_choose > 3
   board = board
 elsif player_choose <= 9 && player_choose > 6
   board[2][player_choose - 1] = first_player
-  borad = board
+  board = board
 end
 
-break if board.all?(String) || player_choose == 0
+break if board.all?(String) || player_choose.zero?
 end
