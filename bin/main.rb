@@ -55,7 +55,7 @@ loop do
     if board[0].eql?(first_player) || board[3].eql?(first_player) || board[6].eql?(first_player)
       puts "#{player_one} is the Winner!"
       break
-    elsif board[0].eql?(second_player) || (board[3].eql?(second_player)) || (board[6].eql?(second_player))
+    elsif board[0].eql?(second_player) || board[3].eql?(second_player) || board[6].eql?(second_player)
       puts "#{player_two} is the Winner!"
       break
     end
