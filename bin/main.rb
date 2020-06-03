@@ -48,10 +48,10 @@ loop do
       break
     end
   elsif board[0].eql?(board[4]) && board[4].eql?(board[8]) || board[2].eql?(board[4]) && board[4].eql?(board[6])
-    if board[0].include?(first_player) || board[2].include?(first_player)
+    if board[0].eql?(first_player) || board[2].eql?(first_player)
       puts "#{player_one} is the Winner!"
       break
-    elsif board[0].include?(second_player) || board[2].include?(second_player)
+    elsif board[0].eql?(second_player) || board[2].eql?(second_player)
       puts "#{player_two} is the Winner!"
       break
     end
