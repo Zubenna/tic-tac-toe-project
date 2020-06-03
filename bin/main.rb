@@ -18,7 +18,7 @@ loop do
     puts "#{player_one} selected #{first_player} and #{player_two} selected #{second_player}"
   elsif first_player == 'O'
     second_player = 'X'
-    puts "#{player_one} please selected #{first_player} and #{player_two} selected #{second_player}"
+    puts "#{player_one} selected #{first_player} and #{player_two} selected #{second_player}"
   else
     puts 'Please select X or O'
   end
@@ -37,7 +37,7 @@ loop do
   puts 'Enter 0 to quit'
   player_choose = gets.chomp
   player_choose = player_choose.to_i
-  puts 'Checking if the selected position is available'
+  # puts 'Checking if the selected position is available'
   if player_choose <= 3 && player_choose >= 1
     if board[0][player_choose - 1].is_a?(String)
       puts "You've already played on this position"
