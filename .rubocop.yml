@@ -3,6 +3,7 @@ AllCops:
     - "README.md"
     - "Guardfile"
     - "Rakefile"
+    - "TargetRubyVersion: 2.3 "
 
   DisplayCopNames: true
 
