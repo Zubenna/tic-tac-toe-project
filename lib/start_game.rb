@@ -1,6 +1,6 @@
 require_relative 'board'
 
-class Game
+class GameLogic
     
     @@board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
     @player_one 
@@ -59,14 +59,14 @@ class Game
   
     end
   
-    def play(player, turn)
+    def play(player, turn, player_choose)
           puts "#{turn}: please select the number where you want to play from the board"
           player_choose = gets.chomp
           player_choose = player_choose.to_i
-          # if board[player_choose].is_a?(String)
-          #   puts
-          #   puts 'The number is taken, please select another one!'
-          #   false
+          if board[player_choose].is_a?(String)
+          puts
+          puts 'The number is taken, please select another one!'
+          false
           if @@board[player_choose].is_a?(Numeric)
             @@board[player_choose] = player
           end
@@ -75,5 +75,5 @@ class Game
 
   # board_check = Board.new
 
-  
+end
   

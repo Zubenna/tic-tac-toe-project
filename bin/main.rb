@@ -71,13 +71,15 @@ class Game
     end
   
     def play(player, turn)
+          board_check = Board.new
           puts "#{turn}: please select the number where you want to play from the board"
           player_choose = gets.chomp
           player_choose = player_choose.to_i
-          # if board[player_choose].is_a?(String)
-          #   puts
-          #   puts 'The number is taken, please select another one!'
-          #   false
+          if board_check.select_number(@@board, player_choose)
+            puts
+            puts 'The number is taken, please select another one!'
+            false
+          end
           if @@board[player_choose].is_a?(Numeric)
             @@board[player_choose] = player
           end

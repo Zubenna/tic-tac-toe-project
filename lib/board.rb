@@ -29,4 +29,14 @@ class Board
         end
     end
     end
+
+
+    def select_number(board, player_choose)
+      loop do
+      if board[player_choose].is_a?(String)
+        return true
+      end
+    end
+    end
+
 end
