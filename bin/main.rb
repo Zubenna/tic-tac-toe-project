@@ -3,9 +3,6 @@
 require_relative '../lib/start_game'
 require_relative '../lib/board'
 
-
-require_relative 'board'
-
 class Game
     
     @@board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
@@ -17,9 +14,9 @@ class Game
       display_board
       puts
       puts 'Player one, enter your name:'
-      player_one = gets.chomp.upcase
+      player_one = gets.chomp
       puts 'Player two, enter your name:'
-      player_two = gets.chomp.upcase
+      player_two = gets.chomp
       select_symbol(player_one, player_two)
     end
    
@@ -51,14 +48,22 @@ class Game
   
     def take_turn(first_player, second_player, player_one, player_two)
       board_check = Board.new
+      display_board
       loop do
           # controler = true
           play(first_player, player_one) 
           if board_check.check_winner(@@board, first_player)
               puts "#{player_one} is the Winner!"
+              display_board
+              break
           end
           display_board
           play(second_player, player_two)
+          if board_check.check_winner_two(@@board, second_player)
+            puts "#{player_two} is the Winner!"
+            display_board
+            break
+          end
           display_board
           # break if !controler
        end
@@ -79,7 +84,8 @@ class Game
       end
   end
 
-  # board_check = Board.new
+start = Game.new
+start.start_game
 
   
   
