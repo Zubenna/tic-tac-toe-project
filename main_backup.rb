@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # The following classes will be implemented Main, player, and Board
-
+def Game
 puts 'Welcome to TIC-TAC-TOE GAME'
 puts
 puts 'Player one, enter your name:'
