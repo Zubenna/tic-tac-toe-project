@@ -11,9 +11,9 @@ class Game
       display_board
       puts
       puts 'Player one, enter your name:'
-      player_one = gets.chomp
+      player_one = gets.chomp.upcase
       puts 'Player two, enter your name:'
-      player_two = gets.chomp
+      player_two = gets.chomp.upcase
       select_symbol(player_one, player_two)
     end
    
