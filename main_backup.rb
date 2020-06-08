@@ -81,7 +81,7 @@ loop do
   end
 
   loop do
-    puts "#{player_two}: please select the number where you want to play from the board"
+    puts "#{player_two}: Please select the position where you want to play from the board"
     playert_choose = gets.chomp
     playert_choose = playert_choose.to_i
     if board[playert_choose].is_a?(String)
