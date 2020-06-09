@@ -1,7 +1,11 @@
 class GameCheck
   def vallidate_position(data)
     pattern = /[0-8]/
-    return data.match? pattern 
+    if data.length == 1 && data.match?(pattern)
+      return true
+    else
+      return false
+    end
   end
 
   def vallidate_name(name)
