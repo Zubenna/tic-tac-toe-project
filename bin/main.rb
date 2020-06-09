@@ -55,7 +55,7 @@ player_choose = ''
 player = ''
 vallid_symbol_two = ''
 value = false
-vallid_symbol_two = 'X' if vallid_symbol_one == 'Y'
+if vallid_symbol_one == 'Y' then vallid_symbol_two = 'X' end
 vallid_symbol_two = 'Y'  if vallid_symbol_one == 'X'
 user_symbol = vallid_symbol_one
 
