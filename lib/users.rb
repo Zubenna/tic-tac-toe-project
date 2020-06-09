@@ -1,7 +1,6 @@
 require_relative '../lib/check_game'
 require_relative '../lib/board'
 class Users
-
   def select_symbol(player_one, player_two)
     check_validity = GameCheck.new
     first_symbol = gets.chomp.upcase
