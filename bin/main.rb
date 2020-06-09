@@ -75,7 +75,9 @@ loop do
   loop do
     player_choose = player_choose.to_i
     check_position = game_board.check_free_position(player_choose)
-    puts 'The position is taken, please select another one!' if check_position == false
+    if check_position == false
+    puts 'The position is taken, please select another one!'
+    end
     break if check_position == true
   end
 
