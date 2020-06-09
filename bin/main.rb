@@ -69,14 +69,10 @@ loop do
     player_choose = gets.chomp
     check_number = check_game.vallidate_position(player_choose)
     puts'Your selection is invalid, Please enter digit between 0 and 8' if check_number == false
-    break if check_number == true
-  end
-   
-  loop do
     player_choose = player_choose.to_i
     check_position = game_board.check_free_position(player_choose)
     puts 'The position is taken, please select another one!' if check_position == false
-    break if check_position == true
+    break if check_position == true && check_number == true
   end
 
   game.play(player_choose, user_symbol)

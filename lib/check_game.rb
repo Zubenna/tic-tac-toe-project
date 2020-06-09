@@ -21,10 +21,4 @@ class GameCheck
         return false
       end
   end
-
-  # def toggle_player(player_one, player_two)
-  #     value = false
-  #   return value
-  # end
-
 end
