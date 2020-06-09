@@ -17,6 +17,7 @@ class GameBoard
   def place_symbol(parameter, vallid_symbol)
     GameBoard.board[parameter] = vallid_symbol
   end
+
   # rubocop:disable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity,Metrics/AbcSize/
   def check_winner
     return true if (GameBoard.board[0].eql?(GameBoard.board[1]) && GameBoard.board[1].eql?(GameBoard.board[2])) || (GameBoard.board[3].eql?(GameBoard.board[4]) && GameBoard.board[4].eql?(GameBoard.board[5])) || (GameBoard.board[6].eql?(GameBoard.board[7]) && GameBoard.board[7].eql?(GameBoard.board[8]))
@@ -26,13 +27,9 @@ class GameBoard
   # rubocop:enable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity,Metrics/AbcSize/
 
   def check_free_position(index)
-    if GameBoard.board[index] == 'X' || GameBoard.board[index] ==  'Y'
-      return false
-    else
-      return true
-    end
+  (GameBoard.board[index] == 'X' || GameBoard.board[index] == 'Y') ? false : true 
   end
-    
+
   def check_draw
     GameBoard.board.all? do |value|
       value.is_a?(String)
