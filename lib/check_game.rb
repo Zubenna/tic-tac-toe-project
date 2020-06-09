@@ -11,6 +11,6 @@ class GameCheck
   end
 
   def vallidate_symbol(symbol)
-    symbol == "X" || symbol == "Y" ? true : false
+    (symbol == 'X' || 'Y') ? true : false
   end
 end
