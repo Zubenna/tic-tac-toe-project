@@ -2,11 +2,9 @@
 require_relative '../lib/check_game'
 require_relative '../lib/users'
 require_relative '../lib/board'
-
 game = Users.new
 check_game = GameCheck.new
 game_board = GameBoard.new
-
 player = ''
 player_two = ''
 first_name = ''
