@@ -1,22 +1,20 @@
 require_relative '../lib/check_game'
 require_relative '../lib/board'
 class Users
-  def select_symbol(player_one, player_two)
+  def select_symbol
     check_validity = GameCheck.new
     first_symbol = gets.chomp.upcase
     vallid_symbol = check_validity.vallidate_symbol(first_symbol)
-    if vallid_symbol == true
-      return first_symbol
-    end
+    return first_symbol if vallid_symbol == true
   end
-  
+
   def assign_symbol(parameter, player_one, player_two)
     if parameter == 'X'
       second_symbol = 'Y'
-      return "#{player_one} selected #{parameter} and #{player_two} now takes #{second_symbol}"
+      "#{player_one} selected #{parameter} and #{player_two} now takes #{second_symbol}"
     elsif parameter == 'Y'
       second_symbol = 'X'
-      return "#{player_one} selected #{parameter} and #{player_two} now takes #{second_symbol}"
+      "#{player_one} selected #{parameter} and #{player_two} now takes #{second_symbol}"
     end
   end
    
