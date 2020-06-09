@@ -17,17 +17,14 @@ class Users
       "#{player_one} selected #{parameter} and #{player_two} now takes #{second_symbol}"
     end
   end
-   
+
   def toggle_symbol(parameter)
-    return "Y" if parameter == "X"
-    return "X" if parameter == "Y"
+    return 'Y' if parameter == 'X'
+    return 'X' if parameter == 'Y'
   end
-  
+
   def play(player_choose, vallid_symbol)
-    #new_board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
     board = GameBoard.new
-    if player_choose.is_a?(Numeric)
-      board.place_symbol(player_choose, vallid_symbol)
-    end
+    board.place_symbol(player_choose, vallid_symbol) if player_choose.is_a?(Numeric)
   end
 end
