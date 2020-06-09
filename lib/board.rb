@@ -27,7 +27,7 @@ class GameBoard
   # rubocop:enable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity,Metrics/AbcSize/
 
   def check_free_position(index)
-  (GameBoard.board[index] == 'X' || GameBoard.board[index] == 'Y') ? false : true 
+    GameBoard.board[index] == 'X' || GameBoard.board[index] == 'Y' ? false : true
   end
 
   def check_draw
