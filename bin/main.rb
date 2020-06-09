@@ -43,16 +43,17 @@ loop do
   first_symbol = gets.chomp.upcase
   selected_symbol = check_game.vallidate_symbol(first_symbol)
   puts 'Invalid!!!, Select X or Y' if selected_symbol == false
-     if selected_symbol == true
-      vallid_symbol_one = first_symbol
-      result = game.assign_symbol(vallid_symbol_one, player_one, player_two)
-      puts result
-    end
-    break if vallid_symbol_one == 'X' || vallid_symbol_one == 'Y'
+  if selected_symbol == true
+    vallid_symbol_one = first_symbol
+    result = game.assign_symbol(vallid_symbol_one, player_one, player_two)
+    puts result
+  end
+  break if vallid_symbol_one == 'X' || 'Y'
 end
 
 player_choose = ''
 player = ''
+vallid_symbol_two = ''
 value = false
 vallid_symbol_two = 'X' if vallid_symbol_one == 'Y'
 vallid_symbol_two = 'Y'  if vallid_symbol_one == 'X'
