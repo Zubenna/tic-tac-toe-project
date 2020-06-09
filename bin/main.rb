@@ -89,15 +89,3 @@ loop do
   value = !value
   user_symbol = game.toggle_symbol(user_symbol)
 end 
-  
-
-
-
-
-
-   
-
-
-
-
-  
