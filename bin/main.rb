@@ -53,10 +53,8 @@ end
 
 player_choose = ''
 player = ''
-vallid_symbol_two = ''
 value = false
-if vallid_symbol_one == 'Y' then vallid_symbol_two = 'X' end
-vallid_symbol_two = 'Y'  if vallid_symbol_one == 'X'
+vallid_symbol_two = 'Y' if vallid_symbol_one == 'X'
 user_symbol = vallid_symbol_one
 
 loop do
