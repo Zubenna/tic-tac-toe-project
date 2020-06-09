@@ -48,7 +48,7 @@ loop do
     result = game.assign_symbol(vallid_symbol_one, player_one, player_two)
     puts result
   end
-  break if vallid_symbol_one == 'X' || 'Y'
+  break if vallid_symbol_one == ('X' || 'Y')
 end
 
 player_choose = ''
