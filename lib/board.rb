@@ -1,31 +1,36 @@
 class GameBoard
-  @@board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+  @board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+  def self.board
+    @board
+  end
 
   def display_board
     "
-    #{@@board[0]}  |  #{@@board[1]}  |  #{@@board[2]}\n
+    #{GameBoard.board[0]}  |  #{GameBoard.board[1]}  |  #{GameBoard.board[2]}\n
   =================
-    #{@@board[3]}  |  #{@@board[4]}  |  #{@@board[5]}\n
+    #{GameBoard.board[3]}  |  #{GameBoard.board[4]}  |  #{GameBoard.board[5]}\n
   =================
-    #{@@board[6]}  |  #{@@board[7]}  |  #{@@board[8]}\n"
+    #{GameBoard.board[6]}  |  #{GameBoard.board[7]}  |  #{GameBoard.board[8]}\n"
   end
 
   def place_symbol(parameter, vallid_symbol)
-    @@board[parameter] = vallid_symbol
+    GameBoard.board[parameter] = vallid_symbol
   end
 
   def check_winner
-    if (@@board[0].eql?(@@board[1]) && @@board[1].eql?(@@board[2])) || (@@board[3].eql?(@@board[4]) && @@board[4].eql?(@@board[5])) || (@@board[6].eql?(@@board[7]) && @@board[7].eql?(@@board[8]))
+    if (GameBoard.board[0].eql?(GameBoard.board[1]) && GameBoard.board[1].eql?(GameBoard.board[2])) || (GameBoard.board[3].eql?(GameBoard.board[4]) && GameBoard.board[4].eql?(GameBoard.board[5])) || (GameBoard.board[6].eql?(GameBoard.board[7]) && GameBoard.board[7].eql?(GameBoard.board[8]))
       return true
-    elsif (@@board[0].eql?(@@board[3]) && @@board[3].eql?(@@board[6])) || (@@board[1].eql?(@@board[4]) && @@board[4].eql?(@@board[7])) || (@@board[2].eql?(@@board[5]) && @@board[5].eql?(@@board[8]))
+    elsif (GameBoard.board[0].eql?(GameBoard.board[3]) && GameBoard.board[3].eql?(GameBoard.board[6])) || (GameBoard.board[1].eql?(GameBoard.board[4]) && GameBoard.board[4].eql?(GameBoard.board[7])) || (GameBoard.board[2].eql?(GameBoard.board[5]) && GameBoard.board[5].eql?(GameBoard.board[8]))
       return true
-    elsif @@board[0].eql?(@@board[4]) && @@board[4].eql?(@@board[8]) || @@board[2].eql?(@@board[4]) && @@board[4].eql?(@@board[6])
+    elsif GameBoard.board[0].eql?(GameBoard.board[4]) && GameBoard.board[4].eql?(GameBoard.board[8]) || GameBoard.board[2].eql?(GameBoard.board[4]) && GameBoard.board[4].eql?(GameBoard.board[6])
       return true
     end
   end
 
   def check_free_position(index)
-    if @@board[index] == 'X' || @@board[index] ==  'Y'
+    if GameBoard.board[index] == 'X' || GameBoard.board[index] ==  'Y'
       return false
     else
       return true
@@ -33,7 +38,7 @@ class GameBoard
   end
     
   def check_draw
-    @@board.all? do |value|
+    GameBoard.board.all? do |value|
       value.is_a?(String)
     end
   end
