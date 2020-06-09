@@ -59,7 +59,6 @@ vallid_symbol_two = "Y"  if vallid_symbol_one == "X"
 user_symbol = vallid_symbol_one
 
 loop do
-    puts value
     puts user_symbol
     player = player_two if value == true
     player = player_one if value == false
