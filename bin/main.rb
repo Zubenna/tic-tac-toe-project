@@ -59,15 +59,15 @@ vallid_symbol_one = 'X' if vallid_symbol_two == 'Y'
 user_symbol = vallid_symbol_one
 
 loop do
-    puts user_symbol
-    player = player_two if value == true
-    player = player_one if value == false
-     
+  puts user_symbol
+  player = player_two if value == true
+  player = player_one if value == false
+
   loop do
     puts "#{player}: Please select the position where you want to play from the board"
     player_choose = gets.chomp
     check_number = check_game.vallidate_position(player_choose)
-    puts'Your selection is invalid, Please enter digit between 0 and 8' if check_number == false
+    puts 'Your selection is invalid, Please enter digit between 0 and 8' if check_number == false
     player_choose = player_choose.to_i
     check_position = game_board.check_free_position(player_choose)
     puts 'The position is taken, please select another one!' if check_position == false
@@ -77,10 +77,10 @@ loop do
   game.play(player_choose, user_symbol)
   puts game_board.display_board
   win = game_board.check_winner
-  if win == true
-    puts "#{player} is the Winner!" 
-    break
-  end
+    if win == true
+      puts "#{player} is the Winner!" 
+      break
+    end
   draw = game_board.check_draw
   if draw == true
     puts 'Waoo!! It is a tie'
