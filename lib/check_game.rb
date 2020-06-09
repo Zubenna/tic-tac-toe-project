@@ -1,28 +1,16 @@
 class GameCheck
   def vallidate_position(data)
     pattern = /[0-8]/
-    if data.length == 1 && data.match?(pattern)
-      return true
-    else
-      return false
-    end
+    data.length == 1 && data.match?(pattern) ? true : false
   end
 
   def vallidate_name(name)
     pattern = /^[a-zA-Z]*$/
     valid_name = name.match? pattern
-    if valid_name && name.length >= 3
-       return true
-    else
-       return false
-    end
+    valid_name && name.length >= 3 ? true : false
   end
 
   def vallidate_symbol(symbol)
-    if symbol == "X" || symbol == "Y"
-      return true
-    else
-      return false
-    end
+    symbol == "X" || symbol == "Y" ? true : false
   end
 end
