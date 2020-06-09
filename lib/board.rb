@@ -1,9 +1,8 @@
 class GameBoard
-
   @board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
-  def self.board
-    @board
+  class << self
+    attr_reader :board
   end
 
   def display_board
