@@ -78,13 +78,17 @@ loop do
   game.play(player_choose, user_symbol)
   puts game_board.display_board
   win = game_board.check_winner
-  puts "#{player} is the Winner!" if win == true
+  if win == true
+    puts "#{player} is the Winner!" 
+    break
+  end
   draw = game_board.check_draw
-  puts 'Waoo!! It is a tie' if draw == true
+  if draw == true
+    puts 'Waoo!! It is a tie'
+    break
+  end
   value = !value
   user_symbol = game.toggle_symbol(user_symbol)
-
-  break if win == true || draw == true
 end 
   
 
