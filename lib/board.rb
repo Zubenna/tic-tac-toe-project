@@ -26,10 +26,10 @@ class GameBoard
     end
 
     def check_free_position(index)
-        if @@board[index].class == 'X' || 'Y'
-          return false
-        else
+        if @@board[index] == 'X' || 'Y'
           return true
+        else
+          return false
         end
     end
       
