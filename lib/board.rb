@@ -25,12 +25,14 @@ class GameBoard
     # column_array_three = [2, 5, 8]
     # diag_array_one = [0, 4, 8]
     # diag_array_two = [2, 4, 6]
-    return true if GameBoard.board[0].eql? GameBoard.board[1] && GameBoard.board[1].eql? GameBoard.board[2]
-    return true if GameBoard.board[3].eql? GameBoard.board[4] && GameBoard.board[4].eql? GameBoard.board[5]
-    return true if GameBoard.board[6].eql? GameBoard.board[7] && GameBoard.board[7].eql? GameBoard.board[8]
-    return true if GameBoard.board[0].eql? GameBoard.board[3] && GameBoard.board[3].eql? GameBoard.board[6]
-    return true if GameBoard.board[1].eql? GameBoard.board[4] && GameBoard.board[4].eql? GameBoard.board[7]
-    return true if GameBoard.board[2].eql? GameBoard.board[5] && GameBoard.board[5].eql? GameBoard.board[8]
+    return true if GameBoard.board[0].eql? GameBoard.board[1] and GameBoard.board[1].eql? GameBoard.board[2]
+    return true if GameBoard.board[3].eql? GameBoard.board[4] and GameBoard.board[4].eql? GameBoard.board[5]
+    return true if GameBoard.board[6].eql? GameBoard.board[7] and GameBoard.board[7].eql? GameBoard.board[8]
+    return true if GameBoard.board[0].eql? GameBoard.board[3] and GameBoard.board[3].eql? GameBoard.board[6]
+    return true if GameBoard.board[1].eql? GameBoard.board[4] and GameBoard.board[4].eql? GameBoard.board[7]
+    return true if GameBoard.board[2].eql? GameBoard.board[5] and GameBoard.board[5].eql? GameBoard.board[8]
+    return true if GameBoard.board[0].eql? GameBoard.board[4] and GameBoard.board[4].eql? GameBoard.board[8]
+    return true if GameBoard.board[2].eql? GameBoard.board[4] and GameBoard.board[4].eql? GameBoard.board[6]
     # return true if (GameBoard.board[0].eql?(GameBoard.board[1]) && GameBoard.board[1].eql?(GameBoard.board[2])) || (GameBoard.board[3].eql?(GameBoard.board[4]) && GameBoard.board[4].eql?(GameBoard.board[5])) || (GameBoard.board[6].eql?(GameBoard.board[7]) && GameBoard.board[7].eql?(GameBoard.board[8]))
     # return true if (GameBoard.board[0].eql?(GameBoard.board[3]) && GameBoard.board[3].eql?(GameBoard.board[6])) || (GameBoard.board[1].eql?(GameBoard.board[4]) && GameBoard.board[4].eql?(GameBoard.board[7])) || (GameBoard.board[2].eql?(GameBoard.board[5]) && GameBoard.board[5].eql?(GameBoard.board[8]))
     # return true if GameBoard.board[0].eql?(GameBoard.board[4]) && GameBoard.board[4].eql?(GameBoard.board[8]) || GameBoard.board[2].eql?(GameBoard.board[4]) && GameBoard.board[4].eql?(GameBoard.board[6])
