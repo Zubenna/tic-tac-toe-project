@@ -3,8 +3,8 @@ require_relative '../lib/board'
 class Users
   def select_symbol
     check_validity = GameCheck.new
-    first_symbol = gets.chomp.upcase
-    vallid_symbol = check_validity.vallidate_symbol(first_symbol)
+    # first_symbol = gets.chomp.upcase
+    # vallid_symbol = check_validity.vallidate_symbol(first_symbol)
     return first_symbol if vallid_symbol == true
   end
 
