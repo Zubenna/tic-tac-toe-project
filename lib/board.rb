@@ -18,7 +18,7 @@ class GameBoard
     GameBoard.board[parameter] = vallid_symbol
   end
 
-  # rubocop:disable CyclomaticComplexity, Metrics/ PerceivedComplexity, Metrics/ AbcSize
+  # rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity, Metrics/AbcSize
   def check_winner
     return true if GameBoard.board[0].eql? GameBoard.board[1] and GameBoard.board[1].eql? GameBoard.board[2]
     return true if GameBoard.board[3].eql? GameBoard.board[4] and GameBoard.board[4].eql? GameBoard.board[5]
@@ -29,7 +29,7 @@ class GameBoard
     return true if GameBoard.board[0].eql? GameBoard.board[4] and GameBoard.board[4].eql? GameBoard.board[8]
     return true if GameBoard.board[2].eql? GameBoard.board[4] and GameBoard.board[4].eql? GameBoard.board[6]
   end
-  # rubocop:enable CyclomaticComplexity, Metrics/ PerceivedComplexity, Metrics/ AbcSize
+  # rubocop:enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity, Metrics/AbcSize
 
   def check_free_position(index)
     GameBoard.board[index] == 'X' || GameBoard.board[index] == 'Y' ? false : true
