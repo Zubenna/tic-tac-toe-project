@@ -74,7 +74,7 @@ loop do
 
   game.play(player_choose, user_symbol)
   puts game_board.display_board
-  win = game_board.check_winner(user_symbol)
+  win = game_board.check_winner
   puts win
   if win == true
     puts "#{player} is the Winner!"
