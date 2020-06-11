@@ -46,7 +46,7 @@ loop do
     result = game.assign_symbol(vallid_symbol_one, player_one, player_two)
     puts result
   end
-  break if vallid_symbol_one == ('X' || 'Y')
+  break if vallid_symbol_one.eql?('X') || vallid_symbol_one.eql?('Y')
 end
 
 player_choose = ''
@@ -57,7 +57,7 @@ vallid_symbol_one = 'X' if vallid_symbol_two == 'Y'
 user_symbol = vallid_symbol_one
 
 loop do
-  puts user_symbol
+  # puts user_symbol
   player = player_two if value == true
   player = player_one if value == false
 
@@ -75,7 +75,6 @@ loop do
   game.play(player_choose, user_symbol)
   puts game_board.display_board
   win = game_board.check_winner(user_symbol)
-  puts win
   if win == true
     puts "#{player} is the Winner!"
     break
