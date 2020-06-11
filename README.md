@@ -26,12 +26,12 @@ This project is about coding the Tic Tac Toe Game using the concept of object or
 - You must chose either **X** or **Y** as the symbol
 - You must enter only numbers between 0 to 8 when playing.
 
-## How To Start The Game
-1.- Click on the install or downland button under the repository name and copy the URL by clicking on the icon.
+## How To Download The Game And Be Ready To Play
+1.- Click on the install or download button under the repository name and copy the URL by clicking on the icon.
          ![PROJECT: first instruction](https://github.com/Zubenna/tic-tac-toe-project/blob/readme_game_instructions/img/first_instruction.png)
-2.- Open your terminal.
+2.- Open your terminal. To open the terminal, press Ctrl+Alt+T(Ubuntu) or if you are using Mac Command + Space and type in 'Terminal'. If you are using Windows you can skip this step, and use the Live Version explained below.
 
-3.- Navigate to the location in your computer where you want the repo to be cloned.
+3.- Navigate to the location in your computer where you want the repo to be cloned. Remeber that you have to type cd first.
 
 4.- Type git clone and paste the url you copied on step one.
          $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
@@ -39,10 +39,15 @@ This project is about coding the Tic Tac Toe Game using the concept of object or
 
 5.- Press Enter. Your local clone will be created.
 
+6.- After cloning your local version, please type 'bin/main.rb' and press Enter.
+
+7.- Enjoy playing!
+
+
 If you rather using a Live Online version of the game, follow the next instructions.
 
 ## Live Version
-Enter the link, at the top part of the webpage you will find a run command. Just press it and you will see the terminal displayed at the right side of the screen.
+Enter the link and at the top part of the webpage you will find a run command. Just press it and you will see the terminal displayed at the right side of the screen. Follow the game instruction always typing inside your terminal.
 
 [Click Here](https://repl.it/@Emiliocm31/Tic-Tac-Toe-Game)
 
