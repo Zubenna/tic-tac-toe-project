@@ -29,19 +29,24 @@ This project is about coding the Tic Tac Toe Game using the concept of object or
 ## How To Download The Game And Be Ready To Play
 1.- Click on the install or download button under the repository name and copy the URL by clicking on the icon.
          ![PROJECT: first instruction](https://github.com/Zubenna/tic-tac-toe-project/blob/readme_game_instructions/img/first_instruction.png)
+         
 2.- Open your terminal. To open the terminal, press Ctrl+Alt+T(Ubuntu) or if you are using Mac Command + Space and type in 'Terminal'. If you are using Windows you can skip this step, and use the Live Version explained below.
+![PROJECT: first instruction](https://github.com/Zubenna/tic-tac-toe-project/blob/readme_game_instructions/img/terminal_open.png)
 
 3.- Navigate to the location in your computer where you want the repo to be cloned. Remeber that you have to type cd first.
+![PROJECT: first instruction](https://github.com/Zubenna/tic-tac-toe-project/blob/readme_game_instructions/img/move_project.png)
 
 4.- Type git clone and paste the url you copied on step one.
          $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-         ![PROJECT: first instruction](https://github.com/Zubenna/tic-tac-toe-project/blob/readme_game_instructions/img/git_clone.png)
+         ![PROJECT: first instruction](https://github.com/Zubenna/tic-tac-toe-project/blob/readme_game_instructions/img/git_clone_better.png)
 
 5.- Press Enter. Your local clone will be created.
 
 6.- After cloning your local version, please type 'bin/main.rb' and press Enter.
+![PROJECT: first instruction](https://github.com/Zubenna/tic-tac-toe-project/blob/readme_game_instructions/img/main_rb.png)
 
 7.- Enjoy playing!
+![PROJECT: first instruction](https://github.com/Zubenna/tic-tac-toe-project/blob/readme_game_instructions/img/game_running.png)
 
 
 If you rather using a Live Online version of the game, follow the next instructions.
