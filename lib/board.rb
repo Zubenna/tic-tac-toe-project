@@ -1,7 +1,7 @@
 class GameBoard
   attr_accessor :board
   def display_board
-      "
+    "
       #{board[0]}  |  #{board[1]}  |  #{board[2]}\n
     =================
       #{board[3]}  |  #{board[4]}  |  #{board[5]}\n
@@ -24,9 +24,9 @@ class GameBoard
 
     return true if diag_check(player_symbol) == true
 
-      all_equal_row(board[0..2], player_symbol) ||
-      all_equal_row(board[3..5], player_symbol) ||
-      all_equal_row(board[6..8], player_symbol)
+    all_equal_row(board[0..2], player_symbol) ||
+    all_equal_row(board[3..5], player_symbol) ||
+    all_equal_row(board[6..8], player_symbol)
   end
 
   def column_check(player_symbol)
@@ -42,25 +42,25 @@ class GameBoard
   end
 
   def diag_check(player_symbol)
-      all_equal(board[0], player_symbol) &&
-      all_equal(board[4], player_symbol) &&
-      all_equal(board[8], player_symbol) ||
-      all_equal(board[0], player_symbol) &&
-      all_equal(board[4], player_symbol) &&
-      all_equal(board[8], player_symbol)
+    all_equal(board[0], player_symbol) &&
+    all_equal(board[4], player_symbol) &&
+    all_equal(board[8], player_symbol) ||
+    all_equal(board[0], player_symbol) &&
+    all_equal(board[4], player_symbol) &&
+    all_equal(board[8], player_symbol)
   end
 
   def all_equal_row(subarray, player_symbol)
-     unique_array = subarray.uniq
-     array_value = ""
-     array_value = unique_array[0] if unique_array.size == 1
-     return true if array_value.eql?(player_symbol)
+    unique_array = subarray.uniq
+    array_value = ''
+    array_value = unique_array[0] if unique_array.size == 1
+    return true if array_value.eql?(player_symbol)
   end
 
   def all_equal(parameter, player_symbol)
     return true if parameter.eql?(player_symbol)
   end
-  
+
   def check_free_position(index)
     board[index] == 'X' || board[index] == 'Y' ? false : true
   end
@@ -79,5 +79,5 @@ class GameBoard
   def play(player_choose, vallid_symbol)
     board[player_choose] = vallid_symbol if player_choose.is_a?(Numeric)
   end
-  
+
 end
