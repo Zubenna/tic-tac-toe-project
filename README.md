@@ -5,7 +5,7 @@ The aim of this project is to build a Tic Tac Toe Game using ruby language.
 
 This project is about coding the Tic Tac Toe Game using the concept of object oriented programming. Here, we explored the use of classes, methods and variables. We also explored the application of these terms in solving a problem. It involves breaking the problem into smaller piece and units, defined a pseudocode on how to solve these problems, wrote a mock solution to the problem and then wrote a proper ruby code arranged in classes and methods combined and arranged properly to solve this problem.
 
-![PROJECT: made by Emilio and Nnamdi](https://github.com/emiliocm9/Capstone-Online-Shop/blob/features/img/ProjectSS2%20-%20copia.jpg)
+![PROJECT: made by Emilio and Nnamdi](https://github.com/Zubenna/tic-tac-toe-project/blob/readme_game_instructions/img/Tic_tac_toeSS.png)
 
 ## Features Of This Game
 
@@ -28,13 +28,14 @@ This project is about coding the Tic Tac Toe Game using the concept of object or
 
 ## How To Start The Game
 1.- Click on the install or downland button under the repository name and copy the URL by clicking on the icon.
-
+         ![PROJECT: first instruction](https://github.com/Zubenna/tic-tac-toe-project/blob/readme_game_instructions/img/first_instruction.png)
 2.- Open your terminal.
 
 3.- Navigate to the location in your computer where you want the repo to be cloned.
 
 4.- Type git clone and paste the url you copied on step one.
          $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+         ![PROJECT: first instruction](https://github.com/Zubenna/tic-tac-toe-project/blob/readme_game_instructions/img/git_clone.png)
 
 5.- Press Enter. Your local clone will be created.
 
