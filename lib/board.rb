@@ -1,21 +1,14 @@
 class GameBoard
-  @board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-
-  class << self
-    attr_reader :board
-  end
-
-  def display_board
+    attr_accessor :board
+    def display_board
     "
-    #{GameBoard.board[0]}  |  #{GameBoard.board[1]}  |  #{GameBoard.board[2]}\n
+    #{board[0]}  |  #{board[1]}  |  #{board[2]}\n
   =================
-    #{GameBoard.board[3]}  |  #{GameBoard.board[4]}  |  #{GameBoard.board[5]}\n
+    #{board[3]}  |  #{board[4]}  |  #{board[5]}\n
   =================
-    #{GameBoard.board[6]}  |  #{GameBoard.board[7]}  |  #{GameBoard.board[8]}\n"
+    #{board[6]}  |  #{board[7]}  |  #{board[8]}\n"
   end
-
   
-
   def assign_symbol(parameter, player_one, player_two)
     if parameter == 'X'
       second_symbol = 'Y'
@@ -28,27 +21,27 @@ class GameBoard
 
   def check_winner(player_symbol)
     return true if column_diag_check(player_symbol) == true
-    all_equal_row(GameBoard.board[0..2], player_symbol) ||
-    all_equal_row(GameBoard.board[3..5], player_symbol) ||
-    all_equal_row(GameBoard.board[6..8], player_symbol)
+    all_equal_row(board[0..2], player_symbol) ||
+    all_equal_row(board[3..5], player_symbol) ||
+    all_equal_row(board[6..8], player_symbol)
   end
 
   def column_diag_check(player_symbol)
-      all_equal(GameBoard.board[0], player_symbol) && 
-      all_equal(GameBoard.board[3], player_symbol) && 
-      all_equal(GameBoard.board[6], player_symbol) ||
-      all_equal(GameBoard.board[1], player_symbol) &&
-      all_equal(GameBoard.board[4], player_symbol) && 
-      all_equal(GameBoard.board[7], player_symbol) || 
-      all_equal(GameBoard.board[2], player_symbol) &&
-      all_equal(GameBoard.board[5], player_symbol) && 
-      all_equal(GameBoard.board[8], player_symbol) ||
-      all_equal(GameBoard.board[0], player_symbol) &&
-      all_equal(GameBoard.board[4], player_symbol) && 
-      all_equal(GameBoard.board[8], player_symbol) ||
-      all_equal(GameBoard.board[0], player_symbol) &&
-      all_equal(GameBoard.board[4], player_symbol) && 
-      all_equal(GameBoard.board[8], player_symbol) 
+      all_equal(board[0], player_symbol) && 
+      all_equal(board[3], player_symbol) && 
+      all_equal(board[6], player_symbol) ||
+      all_equal(board[1], player_symbol) &&
+      all_equal(board[4], player_symbol) && 
+      all_equal(board[7], player_symbol) || 
+      all_equal(board[2], player_symbol) &&
+      all_equal(board[5], player_symbol) && 
+      all_equal(board[8], player_symbol) ||
+      all_equal(board[0], player_symbol) &&
+      all_equal(board[4], player_symbol) && 
+      all_equal(board[8], player_symbol) ||
+      all_equal(board[0], player_symbol) &&
+      all_equal(board[4], player_symbol) && 
+      all_equal(board[8], player_symbol) 
   end
 
   def all_equal_row(subarray, player_symbol)
@@ -63,7 +56,7 @@ class GameBoard
   end
   
   def check_free_position(index)
-    GameBoard.board[index] == 'X' || GameBoard.board[index] == 'Y' ? false : true
+    board[index] == 'X' || board[index] == 'Y' ? false : true
   end
 
   def vallidate_position(data)
@@ -72,13 +65,13 @@ class GameBoard
   end
 
   def check_draw
-    GameBoard.board.all? do |value|
+    board.all? do |value|
       value.is_a?(String)
     end
   end
 
   def play(player_choose, vallid_symbol)
-    GameBoard.board[player_choose] = vallid_symbol if player_choose.is_a?(Numeric)
+    board[player_choose] = vallid_symbol if player_choose.is_a?(Numeric)
   end
   
 end

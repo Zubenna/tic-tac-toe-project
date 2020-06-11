@@ -3,6 +3,7 @@ require_relative '../lib/check_game'
 require_relative '../lib/board'
 check_game = GameCheck.new
 game_board = GameBoard.new
+game_board.board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 player = ''
 player_two = ''
 first_name = ''
