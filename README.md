@@ -5,6 +5,8 @@ The aim of this project is to build a Tic Tac Toe Game using ruby language.
 
 This project is about coding the Tic Tac Toe Game using the concept of object oriented programming. Here, we explored the use of classes, methods and variables. We also explored the application of these terms in solving a problem. It involves breaking the problem into smaller piece and units, defined a pseudocode on how to solve these problems, wrote a mock solution to the problem and then wrote a proper ruby code arranged in classes and methods combined and arranged properly to solve this problem.
 
+![PROJECT: made by Emilio and Nnamdi](https://github.com/emiliocm9/Capstone-Online-Shop/blob/features/img/ProjectSS2%20-%20copia.jpg)
+
 ## Features Of This Game
 
 - Game displays empty board when launched.
@@ -23,6 +25,25 @@ This project is about coding the Tic Tac Toe Game using the concept of object or
 - Do not play twice before your opponent plays.
 - You must chose either **X** or **Y** as the symbol
 - You must enter only numbers between 0 to 8 when playing.
+
+## How To Start The Game
+1.- Click on the install or downland button under the repository name and copy the URL by clicking on the icon.
+
+2.- Open your terminal.
+
+3.- Navigate to the location in your computer where you want the repo to be cloned.
+
+4.- Type git clone and paste the url you copied on step one.
+         $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+
+5.- Press Enter. Your local clone will be created.
+
+If you rather using a Live Online version of the game, follow the next instructions.
+
+## Live Version
+Enter the link, at the top part of the webpage you will find a run command. Just press it and you will see the terminal displayed at the right side of the screen.
+
+[Click Here](https://repl.it/@Emiliocm31/Tic-Tac-Toe-Game)
 
 ## How to Play
 
@@ -57,9 +78,12 @@ If both players were geniuses, and placed all there symbols on the board in such
 
 ## Authors
 
-👤 **Jocyline Magero**
+👤 **Emilio Contreras**
 
--
+- Github: [@emiliocm9](https://github.com/emiliocm9)
+- Twitter: [@emiliocm31](https://twitter.com/emiliocm31)
+- Email: [email](emilio.contreras97@gmail.com)
+
 👤 **Nnamdi Emelu**
 
 - Github: [@githubhandle](https://github.com/zubenna)
