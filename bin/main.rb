@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
 require_relative '../lib/check_game'
-require_relative '../lib/users'
 require_relative '../lib/board'
-game = Users.new
 check_game = GameCheck.new
 game_board = GameBoard.new
 player = ''
@@ -43,7 +41,7 @@ loop do
   puts 'Invalid!!!, Select X or Y' if selected_symbol == false
   if selected_symbol == true
     vallid_symbol_one = first_symbol
-    result = game.assign_symbol(vallid_symbol_one, player_one, player_two)
+    result = game_board.assign_symbol(vallid_symbol_one, player_one, player_two)
     puts result
   end
   break if vallid_symbol_one.eql?('X') || vallid_symbol_one.eql?('Y')
@@ -57,14 +55,13 @@ vallid_symbol_one = 'X' if vallid_symbol_two == 'Y'
 user_symbol = vallid_symbol_one
 
 loop do
-  # puts user_symbol
   player = player_two if value == true
   player = player_one if value == false
 
   loop do
     puts "#{player}: Please select the position where you want to play from the board"
     player_choose = gets.chomp
-    check_number = check_game.vallidate_position(player_choose)
+    check_number = game_board.vallidate_position(player_choose)
     puts 'Your selection is invalid, Please enter digit between 0 and 8' if check_number == false
     player_choose = player_choose.to_i
     check_position = game_board.check_free_position(player_choose)
@@ -72,7 +69,7 @@ loop do
     break if check_position == true && check_number == true
   end
 
-  game.play(player_choose, user_symbol)
+  game_board.play(player_choose, user_symbol)
   puts game_board.display_board
   win = game_board.check_winner(user_symbol)
   if win == true
@@ -85,5 +82,5 @@ loop do
     break
   end
   value = !value
-  user_symbol = game.toggle_symbol(user_symbol)
+  user_symbol = check_game .toggle_symbol(user_symbol)
 end

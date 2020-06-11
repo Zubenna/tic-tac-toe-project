@@ -14,8 +14,16 @@ class GameBoard
     #{GameBoard.board[6]}  |  #{GameBoard.board[7]}  |  #{GameBoard.board[8]}\n"
   end
 
-  def place_symbol(parameter, vallid_symbol)
-    GameBoard.board[parameter] = vallid_symbol
+  
+
+  def assign_symbol(parameter, player_one, player_two)
+    if parameter == 'X'
+      second_symbol = 'Y'
+      "#{player_one} selected #{parameter} and #{player_two} now takes #{second_symbol}"
+    elsif parameter == 'Y'
+      second_symbol = 'X'
+      "#{player_one} selected #{parameter} and #{player_two} now takes #{second_symbol}"
+    end
   end
 
   def check_winner(player_symbol)
@@ -58,9 +66,19 @@ class GameBoard
     GameBoard.board[index] == 'X' || GameBoard.board[index] == 'Y' ? false : true
   end
 
+  def vallidate_position(data)
+    pattern = /[0-8]/
+    data.length == 1 && data.match?(pattern) ? true : false
+  end
+
   def check_draw
     GameBoard.board.all? do |value|
       value.is_a?(String)
     end
   end
+
+  def play(player_choose, vallid_symbol)
+    GameBoard.board[player_choose] = vallid_symbol if player_choose.is_a?(Numeric)
+  end
+  
 end
