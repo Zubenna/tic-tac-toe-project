@@ -34,11 +34,11 @@ class GameBoard
       all_equal(board[3], player_symbol) &&
       all_equal(board[6], player_symbol) ||
       all_equal(board[1], player_symbol) &&
-      all_equal(board[4], player_symbol) &&
-      all_equal(board[7], player_symbol) ||
+        all_equal(board[4], player_symbol) &&
+        all_equal(board[7], player_symbol) ||
       all_equal(board[2], player_symbol) &&
-      all_equal(board[5], player_symbol) &&
-      all_equal(board[8], player_symbol)
+        all_equal(board[5], player_symbol) &&
+        all_equal(board[8], player_symbol)
   end
 
   def diag_check(player_symbol)
@@ -46,8 +46,8 @@ class GameBoard
       all_equal(board[4], player_symbol) &&
       all_equal(board[8], player_symbol) ||
       all_equal(board[0], player_symbol) &&
-      all_equal(board[4], player_symbol) &&
-      all_equal(board[8], player_symbol)
+        all_equal(board[4], player_symbol) &&
+        all_equal(board[8], player_symbol)
   end
 
   def all_equal_row(subarray, player_symbol)
