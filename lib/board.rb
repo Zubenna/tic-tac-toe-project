@@ -45,9 +45,9 @@ class GameBoard
     all_equal(board[0], player_symbol) &&
       all_equal(board[4], player_symbol) &&
       all_equal(board[8], player_symbol) ||
-      all_equal(board[0], player_symbol) &&
+      all_equal(board[2], player_symbol) &&
         all_equal(board[4], player_symbol) &&
-        all_equal(board[8], player_symbol)
+        all_equal(board[6], player_symbol)
   end
 
   def all_equal_row(subarray, player_symbol)
