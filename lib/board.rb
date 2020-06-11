@@ -8,7 +8,7 @@ class GameBoard
   =================
     #{board[6]}  |  #{board[7]}  |  #{board[8]}\n"
   end
-  
+
   def assign_symbol(parameter, player_one, player_two)
     if parameter == 'X'
       second_symbol = 'Y'
@@ -20,13 +20,14 @@ class GameBoard
   end
 
   def check_winner(player_symbol)
-    return true if column_diag_check(player_symbol) == true
+    return true if column_check(player_symbol) == true
+    return true if diag_check(player_symbol) == true
     all_equal_row(board[0..2], player_symbol) ||
     all_equal_row(board[3..5], player_symbol) ||
     all_equal_row(board[6..8], player_symbol)
   end
 
-  def column_diag_check(player_symbol)
+  def column_check(player_symbol)
       all_equal(board[0], player_symbol) && 
       all_equal(board[3], player_symbol) && 
       all_equal(board[6], player_symbol) ||
@@ -35,7 +36,11 @@ class GameBoard
       all_equal(board[7], player_symbol) || 
       all_equal(board[2], player_symbol) &&
       all_equal(board[5], player_symbol) && 
-      all_equal(board[8], player_symbol) ||
+      all_equal(board[8], player_symbol)
+      
+  end
+
+  def diag_check(player_symbol)
       all_equal(board[0], player_symbol) &&
       all_equal(board[4], player_symbol) && 
       all_equal(board[8], player_symbol) ||
