@@ -1,4 +1,4 @@
-
+[![Run on Repl.it](https://repl.it/badge/github/Zubenna/tic-tac-toe-project)](https://repl.it/github/Zubenna/tic-tac-toe-project)
 # Tic Tac Toe Game
 
 The aim of this project is to build a Tic Tac Toe Game using ruby language.
