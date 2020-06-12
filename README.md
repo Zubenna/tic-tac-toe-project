@@ -52,7 +52,7 @@ This project is about coding the Tic Tac Toe Game using the concept of object or
 If you rather using a Live Online version of the game, follow the next instructions.
 
 ## Live Version
-Enter the link and at the top part of the webpage you will find a run command. Just press it and you will see the terminal displayed at the right side of the screen. Follow the game instruction always typing inside your terminal.
+Enter the link and at the top part of the webpage you will find a run command. Just click on run and you will see the terminal displayed at the right side of the screen. Follow the game instruction always typing inside your terminal.
 
 [Click Here](https://repl.it/@Emiliocm31/Tic-Tac-Toe-Game)
 
